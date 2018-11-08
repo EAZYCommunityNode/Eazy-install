@@ -1,10 +1,10 @@
 #!/bin/bash
-CONFIG_FILE='eazy.conf'
-CONFIGFOLDER='/root/.eazy'
-COIN_DAEMON='/usr/local/bin/eazyd'
-COIN_CLI='/usr/local/bin/eazy-cli'
+CONFIG_FILE='ezy.conf'
+CONFIGFOLDER='/root/.eay'
+COIN_DAEMON='/usr/local/bin/ezyd'
+COIN_CLI='/usr/local/bin/ezy-cli'
 COIN_REPO='https://github.com/EAZYCommunityNode/eazynode/releases/download/v1.0/Eazy-Linux.zip'
-COIN_NAME='Eazy'
+COIN_NAME='Ezy'
 COIN_PORT=52320
 
 NODEIP=$(curl -s4 icanhazip.com)
@@ -47,7 +47,7 @@ function compile_node() {
   tar xvzf $COIN_ZIP >/dev/null 2>&1
   compile_error
   rm -f $COIN_ZIP >/dev/null 2>&1
-  cp eazy* /usr/local/bin
+  cp ezy* /usr/local/bin
   compile_error
   strip $COIN_DAEMON $COIN_CLI
   cd -
