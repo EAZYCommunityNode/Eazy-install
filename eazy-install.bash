@@ -1,10 +1,10 @@
 #!/bin/bash
-CONFIG_FILE='eazy.conf'
-CONFIGFOLDER='/root/.eazy'
-COIN_DAEMON='/usr/local/bin/eazyd'
-COIN_CLI='/usr/local/bin/eazy-cli'
+CONFIG_FILE='ezy.conf'
+CONFIGFOLDER='/root/.ezy'
+COIN_DAEMON='/usr/local/bin/ezyd'
+COIN_CLI='/usr/local/bin/ezy-cli'
 COIN_REPO='https://github.com/EAZYCommunityNode/eazynode/releases/download/v1.0/Eazy-Linux.zip'
-COIN_NAME='Eazy'
+COIN_NAME='Ezy'
 COIN_PORT=52320
 
 NODEIP=$(curl -s4 icanhazip.com)
