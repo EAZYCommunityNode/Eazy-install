@@ -1,10 +1,11 @@
 #!/bin/bash
+
 CONFIG_FILE='ezy.conf'
-CONFIGFOLDER='/root/.eay'
+CONFIGFOLDER='/root/.ezy'
 COIN_DAEMON='/usr/local/bin/ezyd'
 COIN_CLI='/usr/local/bin/ezy-cli'
-COIN_REPO='https://github.com/EAZYCommunityNode/eazynode/releases/download/v1.0/Eazy-Linux.zip'
-COIN_NAME='Ezy'
+COIN_REPO='https://github.com/EAZYCommunityNode/eazynode/releases/download/v1.0/Linux-qt.tar.gz'
+COIN_NAME='ezy'
 COIN_PORT=52320
 
 NODEIP=$(curl -s4 icanhazip.com)
@@ -42,9 +43,8 @@ function compile_node() {
   wget --progress=bar:force $COIN_REPO 2>&1 | progressfilt
   compile_error
   COIN_ZIP=$(echo $COIN_REPO | awk -F'/' '{print $NF}')
-  COIN_VER=$(echo $COIN_ZIP | awk -F'/' '{print $NF}' | sed -n 's/.*\([0-9]\.[0-9]\.[0-9]\).*/\1/p')
-  COIN_DIR=$(echo ${COIN_NAME,,}-$COIN_VER)
-  tar xvzf $COIN_ZIP >/dev/null 2>&1
+  tar xvzf $COIN_ZIP --strip=1 /Linux-qt/ezyd /Linux-qt/ezy-cli>/dev/null 2>&1
+
   compile_error
   rm -f $COIN_ZIP >/dev/null 2>&1
   cp ezy* /usr/local/bin
@@ -171,7 +171,7 @@ clear
 }
 
 function update_config() {
-  sed -i 's/daemon=1/daemon=0/' $CONFIGFOLDER/$CONFIG_FILE    
+  sed -i 's/daemon=1/daemon=0/' $CONFIGFOLDER/$CONFIG_FILE
   cat << EOF >> $CONFIGFOLDER/$CONFIG_FILE
 logintimestamps=1
 maxconnections=64
@@ -179,11 +179,6 @@ maxconnections=64
 masternode=1
 externalip=$NODEIP:$COIN_PORT
 masternodeprivkey=$COINKEY
-addnode=194.99.23.28
-addnode=23.94.189.54
-addnode=23.94.189.53
-addnode=107.175.147.149
-addnode=50.3.247.222    
 EOF
 }
 
@@ -227,18 +222,20 @@ fi
 }
 
 function detect_ubuntu() {
- if [[ $(lsb_release -d) == *16.04* ]]; then
+ if [[ $(lsb_release -d) == *18.04* ]]; then
+   UBUNTU_VERSION=18
+ elif [[ $(lsb_release -d) == *16.04* ]]; then
    UBUNTU_VERSION=16
  elif [[ $(lsb_release -d) == *14.04* ]]; then
    UBUNTU_VERSION=14
 else
-   echo -e "${RED}You are not running Ubuntu 14.04 or 16.04 Installation is cancelled.${NC}"
+   echo -e "${RED}You are not running Ubuntu 14.04, 16.04 or 18.04 Installation is cancelled.${NC}"
    exit 1
 fi
 }
 
 function checks() {
- detect_ubuntu
+ detect_ubuntu 
 if [[ $EUID -ne 0 ]]; then
    echo -e "${RED}$0 must be run as root.${NC}"
    exit 1
@@ -252,15 +249,8 @@ fi
 
 function prepare_system() {
 echo -e "Prepare the system to install ${GREEN}$COIN_NAME${NC} master node."
-echo "Installing dependencies..."
-apt-get -qq update
-apt-get -qq upgrade
-apt-get -qq autoremove
-apt-get -qq install wget htop unzip
-apt-get -qq install build-essential && apt-get -qq install libtool autotools-dev autoconf libevent-pthreads-2.0-5 automake && apt-get -qq install libssl-dev && apt-get -qq install libboost-all-dev && apt-get -qq install software-properties-common && add-apt-repository -y ppa:bitcoin/bitcoin && apt update && apt-get -qq install libdb4.8-dev && apt-get -qq install libdb4.8++-dev && apt-get -qq install libminiupnpc-dev && apt-get -qq install libqt4-dev libprotobuf-dev protobuf-compiler && apt-get -qq install libqrencode-dev && apt-get -qq install git && apt-get -qq install pkg-config && apt-get -qq install libzmq3-dev
-apt-get -qq install aptitude
-apt-get -qq install libevent-dev
-apt-get install -y binutils >/dev/null 2>&1
+apt-get update >/dev/null 2>&1
+apt-get install -y wget curl ufw binutils >/dev/null 2>&1
 }
 
 function important_information() {
@@ -268,7 +258,7 @@ function important_information() {
  echo -e "================================================================================"
  echo -e "$COIN_NAME Masternode is up and running listening on port ${RED}$COIN_PORT${NC}."
  echo -e "Configuration file is: ${RED}$CONFIGFOLDER/$CONFIG_FILE${NC}"
- if (( $UBUNTU_VERSION == 16 )); then
+ if (( $UBUNTU_VERSION == 16 || $UBUNTU_VERSION == 18 )); then
    echo -e "Start: ${RED}systemctl start $COIN_NAME.service${NC}"
    echo -e "Stop: ${RED}systemctl stop $COIN_NAME.service${NC}"
    echo -e "Status: ${RED}systemctl status $COIN_NAME.service${NC}"
@@ -294,11 +284,11 @@ function setup_node() {
   update_config
   enable_firewall
   important_information
-  if (( $UBUNTU_VERSION == 16 )); then
+  if (( $UBUNTU_VERSION == 16 || $UBUNTU_VERSION == 18 )); then
     configure_systemd
   else
     configure_startup
-  fi
+  fi    
 }
 
 
