@@ -1,4 +1,4 @@
-#!/bin/bash
+﻿#!/bin/bash
 
 CONFIG_FILE='ezy.conf'
 CONFIGFOLDER='/root/.ezy'
