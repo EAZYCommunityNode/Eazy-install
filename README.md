@@ -46,23 +46,23 @@ startmasternode "alias" "0" "MN1"
 
 ## Usage:
 ```
-eazy-cli getinfo
-eazy-cli mnsync status
-eazy-cli masternode status
+ezy-cli getinfo
+ezy-cli mnsync status
+ezy-cli masternode status
 ```
 Also, if you want to check/start/stop **EAZY** , run one of the following commands as **root**:
 
 **Ubuntu 16.04**:
 ```
-systemctl status eazy #To check the service is running.
-systemctl start eazy #To start EAZY service.
-systemctl stop eazy #To stop EAZY service.
-systemctl is-enabled eazy #To check whetether EAZY service is enabled on boot or not.
+systemctl status ezy #To check the service is running.
+systemctl start ezy #To start EAZY service.
+systemctl stop ezy #To stop EAZY service.
+systemctl is-enabled ezy #To check whetether EAZY service is enabled on boot or not.
 ```
 **Ubuntu 14.04**:  
 ```
-/etc/init.d/eazy start #To start EAZY service
-/etc/init.d/eazy stop #To stop EAZY service
-/etc/init.d/eazy restart #To restart EAZY service
+/etc/init.d/ezy start #To start EAZY service
+/etc/init.d/ezy stop #To stop EAZY service
+/etc/init.d/ezy restart #To restart EAZY service
 ```
 ***
