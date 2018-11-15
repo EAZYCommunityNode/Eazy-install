@@ -4,14 +4,14 @@ Shell script to install a [EASY Masternode](https://www.eazynode.com/) on a Linu
 ***
 ## Installation:
 ```
-git clone https://github.com/EAZYCommunityNode/eazynode/releases/download/v1.0/Eazy-Linux.zip
+git clone https://github.com/EAZYCommunityNode/Eazy-install.git
 cd Eazy-Linux
 bash eazy-install.sh
 ```
 ***
 ## Single Line Command for MN Installation: Copy and paste it in your VPS
 ```
-curl https://raw.githubusercontent.com/EAZYCommunityNode/Easy-install/master/easy-install.sh | bash
+curl https://github.com/EAZYCommunityNode/Eazy-install/blob/master/eazy-install.sh | bash
 
 
 ```
