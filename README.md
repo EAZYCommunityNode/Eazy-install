@@ -1,5 +1,5 @@
 # EAZY
-Shell script to install a [EASY Masternode](https://www.eazynode.com/) on a Linux server running Ubuntu 14.04 or 16.04. Use it on your own risk.
+Shell script to install a [EASY Masternode](https://www.eazynode.pro/) on a Linux server running Ubuntu 14.04 or 16.04. Use it on your own risk.
 
 ***
 ## Installation:
