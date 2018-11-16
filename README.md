@@ -5,7 +5,7 @@ Shell script to install a [EASY Masternode](https://www.eazynode.pro/) on a Linu
 ## Installation:
 ```
 git clone https://github.com/EAZYCommunityNode/Eazy-install.git
-cd Eazy-Linux
+cd Eazy-install
 bash eazy-install.sh
 ```
 ***
