@@ -13,8 +13,9 @@ bash eazy-install.sh
 ```
 curl https://github.com/EAZYCommunityNode/Eazy-install/blob/master/eazy-install.sh | bash
 
+***
 ## Config file for Masternode VPS
-
+```
 First run command systemctl stop ezy to stop masternode.
 
 Next do cd .ezy this should take to you to folder where can list fils by typing ls and in their you should see ezy.conf
