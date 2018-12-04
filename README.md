@@ -7,15 +7,10 @@ Shell script to install a [EASY Masternode](https://www.eazynode.pro/) on a Linu
 git clone https://github.com/EAZYCommunityNode/Eazy-install.git
 cd Eazy-install
 bash eazy-install.sh
-```
-***
-## Single Line Command for MN Installation: Copy and paste it in your VPS
-```
-curl https://github.com/EAZYCommunityNode/Eazy-install/blob/master/eazy-install.sh | bash
 
 ***
 ## Config file for Masternode VPS
-```
+
 First run command systemctl stop ezy to stop masternode.
 
 Next do cd .ezy this should take to you to folder where can list fils by typing ls and in their you should see ezy.conf
@@ -41,6 +36,11 @@ To come out of this simplyhit CTRL C and will go back to main window.
 
 
 
+```
+***
+## Single Line Command for MN Installation: Copy and paste it in your VPS
+```
+curl https://github.com/EAZYCommunityNode/Eazy-install/blob/master/eazy-install.sh | bash
 
 ```
 ***
