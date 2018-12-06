@@ -14,8 +14,7 @@ bash eazy-install.sh
 ***
 ```
 ## Config file for Masternode VPS (If you are having trouble connecting to the nodes):
-```
-***
+
 First run command **systemctl** stop ezy to stop masternode.
 
 Next do **cd .ezy** this should take to you to folder where can list files by typing ls and in their you should see ezy.conf
@@ -25,23 +24,24 @@ Now to edit.
 type in **nano ezy.conf**
 
 After the line where your masternodeprivkey is create a new line and place the following in.
+```
 addnode=194.99.23.28
 addnode=23.94.189.54
 addnode=23.94.189.53
 addnode=37.48.67.162
 addnode=207.148.122.124
-
+```
 Now do CTRL X hit letter Y to confirm changes and hit enter this should now save the new config.
 
-Now type cd hit enter should take you back to main root or user.
-Now to start server again systemctl start ezy
+Now type **cd** hit enter should take you back to main root or user.
+Now to start server again **systemctl start ezy**
 
-Now you can do watch ezy-cli getinfo this should show active connections and refreshed every 2 sec.
+Now you can do **watch ezy-cli getinfo** this should show active connections and refreshed every 2 sec.
 To come out of this simplyhit CTRL C and will go back to main window.
 
 
 
-```
+
 ***
 ## Single Line Command for MN Installation: Copy and paste it in your VPS 
 (Currently throwing some users errors, reccomend the commands shown at the start of the readme.)
