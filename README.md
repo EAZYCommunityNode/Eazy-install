@@ -1,16 +1,20 @@
 # EAZY
 Shell script to install a [EASY Masternode](https://www.eazynode.pro/) on a Linux server running Ubuntu 14.04 or 16.04. Use it on your own risk.
 
-***
+
 ## Installation:
 ```
+***
+When logged into your Masternode VPS, copy and paste the following commands to install the Masternode client:
 git clone https://github.com/EAZYCommunityNode/Eazy-install.git
 cd Eazy-install
 bash eazy-install.sh
 
 ***
-## Config file for Masternode VPS
-
+```
+## Config file for Masternode VPS (If you are having trouble connecting to the nodes):
+```
+***
 First run command systemctl stop ezy to stop masternode.
 
 Next do cd .ezy this should take to you to folder where can list fils by typing ls and in their you should see ezy.conf
@@ -38,7 +42,8 @@ To come out of this simplyhit CTRL C and will go back to main window.
 
 ```
 ***
-## Single Line Command for MN Installation: Copy and paste it in your VPS
+## Single Line Command for MN Installation: Copy and paste it in your VPS 
+(Currently throwing some users errors, reccomend the commands shown at the start of the readme.)
 ```
 curl https://github.com/EAZYCommunityNode/Eazy-install/blob/master/eazy-install.sh | bash
 
@@ -52,7 +57,7 @@ After the MN is up and running, you need to configure the desktop wallet accordi
 3. Send **5000** **Eazy** to **MN1**.
 4. Wait for 15 confirmations.
 5. Go to **Tools -> "Debug console - Console"**
-6. Type the following command: **masternode outputs**
+6. Type the following command: **masternode outputs**. This will then show your current available outputs to connect your nodes to. We will need these values in a moment.
 7. Go to  ** Tools -> "Open Masternode Configuration File"
 8. Add the following entry:
 ```
@@ -63,6 +68,7 @@ Alias Address Privkey TxHash Output_index
 * Privkey: **Masternode Private Key**
 * TxHash: **First value from Step 6**
 * Output index:  **Second value from Step 6**
+**Make sure you do a separate entry for each masternode you are setting up**
 9. Save and close the file.
 10. Go to **Masternode Tab**. If you tab is not shown, please enable it from: **Settings - Options - Wallet - Show Masternodes Tab**
 11. Click **Update status** to see your node. If it is not shown, close the wallet and start it again. Make sure the wallet is unlocked.
