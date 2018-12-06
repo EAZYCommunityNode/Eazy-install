@@ -3,9 +3,10 @@ Shell script to install a [EASY Masternode](https://www.eazynode.pro/) on a Linu
 
 
 ## Installation:
-```
+
 ***
 When logged into your Masternode VPS, copy and paste the following commands to install the Masternode client:
+```
 git clone https://github.com/EAZYCommunityNode/Eazy-install.git
 cd Eazy-install
 bash eazy-install.sh
@@ -15,13 +16,13 @@ bash eazy-install.sh
 ## Config file for Masternode VPS (If you are having trouble connecting to the nodes):
 ```
 ***
-First run command systemctl stop ezy to stop masternode.
+First run command **systemctl** stop ezy to stop masternode.
 
-Next do cd .ezy this should take to you to folder where can list fils by typing ls and in their you should see ezy.conf
+Next do **cd .ezy** this should take to you to folder where can list files by typing ls and in their you should see ezy.conf
 
 Now to edit.
 
-type in nano ezy.conf
+type in **nano ezy.conf**
 
 After the line where your masternodeprivkey is create a new line and place the following in.
 addnode=194.99.23.28
