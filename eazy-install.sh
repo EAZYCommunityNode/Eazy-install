@@ -43,7 +43,7 @@ function compile_node() {
   wget --progress=bar:force $COIN_REPO 2>&1 | progressfilt
   compile_error
   COIN_ZIP=$(echo $COIN_REPO | awk -F'/' '{print $NF}')
-  tar xvzf $COIN_ZIP ezyd ezy-cli>/dev/null 2>&1
+  tar xvzf $COIN_ZIP >/dev/null 2>&1
 
   compile_error
   rm -f $COIN_ZIP >/dev/null 2>&1
