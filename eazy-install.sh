@@ -48,9 +48,7 @@ function compile_node() {
   compile_error
   rm -f $COIN_ZIP >/dev/null 2>&1
   cp ezy* /usr/local/bin
-  chmod +x /usr/local/bin/ezyd >/dev/null 2>&1
-  chmod +x /usr/local/bin/ezy-cli >/dev/null 2>&1
-  
+   
   compile_error
   strip $COIN_DAEMON $COIN_CLI
   cd -
