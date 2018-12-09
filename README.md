@@ -36,9 +36,8 @@ To exit this screen, hit **CTRL+C**. This will take you back to the main window.
 
 ***
 ## Single Line Command for MN Installation: Copy and paste it in your VPS: 
-(Currently throwing some users errors, we recommend using the commands shown at the start of the readme until this is resolved.)
 ```
-curl https://github.com/EAZYCommunityNode/Eazy-install/blob/master/eazy-install.sh | bash
+git clone https://github.com/EAZYCommunityNode/Eazy-install.git && cd Eazy-install && bash eazy-install.sh
 
 ```
 ***
