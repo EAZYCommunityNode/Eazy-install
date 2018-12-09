@@ -4,7 +4,7 @@ CONFIG_FILE='ezy.conf'
 CONFIGFOLDER='/root/.ezy'
 COIN_DAEMON='/usr/local/bin/ezyd'
 COIN_CLI='/usr/local/bin/ezy-cli'
-COIN_REPO='https://github.com/EAZYCommunityNode/eazynode/releases/download/v1.0/Linux-qt.tar.gz'
+COIN_REPO='https://github.com/EAZYCommunityNode/eazynode/releases/download/v2.1.0/ezy-2.1.0-linux-setup-MN-only.tar.gz'
 COIN_NAME='ezy'
 COIN_PORT=52320
 
@@ -43,7 +43,7 @@ function compile_node() {
   wget --progress=bar:force $COIN_REPO 2>&1 | progressfilt
   compile_error
   COIN_ZIP=$(echo $COIN_REPO | awk -F'/' '{print $NF}')
-  tar xvzf $COIN_ZIP --strip=1 Linux-qt/ezyd Linux-qt/ezy-cli>/dev/null 2>&1
+  tar xvzf $COIN_ZIP ezyd ezy-cli>/dev/null 2>&1
 
   compile_error
   rm -f $COIN_ZIP >/dev/null 2>&1
