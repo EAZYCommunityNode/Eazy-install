@@ -41,6 +41,15 @@ git clone https://github.com/EAZYCommunityNode/Eazy-install.git && cd Eazy-insta
 
 ```
 ***
+## Commands to set up Multi-MN for EZY (Currently supports up to 3 MN on 1 VPS):
+```
+git clone https://github.com/EAZYCommunityNode/Eazy-install.git
+cd Eazy-install
+chmod +x install-multi.ezy
+./install-multi.ezy
+
+```
+***
 ## Desktop wallet setup:
 
 After the MN is up and running, you need to configure the desktop wallet accordingly. Here are the steps for the Windows wallet.
