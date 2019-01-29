@@ -252,6 +252,10 @@ function prepare_system() {
 echo -e "Prepare the system to install ${GREEN}$COIN_NAME${NC} master node."
 apt-get update >/dev/null 2>&1
 apt-get install -y wget curl ufw binutils >/dev/null 2>&1
+apt -y install software-properties-common >/dev/null 2>&1
+apt-add-repository -y ppa:bitcoin/bitcoin >/dev/null 2>&1
+apt-get update >/dev/null 2>&1
+apt install -y build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils libboost-all-dev libdb4.8-dev libdb4.8++-dev libminiupnpc-dev libzmq3-dev git nano tmux libgmp3-dev pwgen curl >/dev/null 2>&1
 }
 
 function important_information() {
