@@ -47,7 +47,10 @@ git clone https://github.com/EAZYCommunityNode/Eazy-install.git
 cd Eazy-install
 chmod +x install-multi.ezy
 ./install-multi.ezy
-
+In case the MN's do not sync use the follow command:
+sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn*.conf -datadir=/var/lib/masternodes/ezy_mn* addnode xxx.xxx.xxx.xxx add
+Where * is the MN (1, 2 or 3) and xxx.xxx.xxx.xxx is the IP address you want to add.
+IP addresses to add you can find in the explorer under the tab network (http://explorer.eazynode.pro/network).
 ```
 ***
 ## Desktop wallet setup:
