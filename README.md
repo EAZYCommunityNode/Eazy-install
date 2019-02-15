@@ -54,6 +54,14 @@ sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn*.conf -datadir=/var/li
 
 Where * is the MN (1, 2 or 3) and xxx.xxx.xxx.xxx is the IP address you want to add.
 IP addresses to add you can find in the explorer under the tab network (http://explorer.eazynode.pro/network).
+
+## Usage (Where * is the MN 1,2, or 3)
+systemctl status ezy_mn* #To check the service is running.
+systemctl start ezy_mn* #To start EAZY service.
+systemctl stop ezy_mn* #To stop EAZY service.
+systemctl is-enabled ezy_mn* #To check whetether EAZY service is enabled on boot or not.
+
+**You need to run the commands on all 3 masternodes separately**
 ```
 ***
 ## Desktop wallet setup:
