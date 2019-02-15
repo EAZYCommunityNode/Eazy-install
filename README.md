@@ -43,6 +43,7 @@ git clone https://github.com/EAZYCommunityNode/Eazy-install.git && cd Eazy-insta
 ***
 ## Commands to set up Multi-MN for EZY (Currently supports up to 3 MN on 1 VPS):
 ```
+chmod +x /var/
 git clone https://github.com/EAZYCommunityNode/Eazy-install.git
 cd Eazy-install
 chmod +x install-multi.ezy
