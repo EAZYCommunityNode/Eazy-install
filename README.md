@@ -49,7 +49,7 @@ cd Eazy-install
 chmod +x install-multi.ezy
 ./install-multi.ezy
 ```
-## In case the MN's do not sync use the follow command:
+## In case the MN's do not sync use the following command:
 ```
 sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn*.conf -datadir=/var/lib/masternodes/ezy_mn* addnode xxx.xxx.xxx.xxx add
 
@@ -75,8 +75,11 @@ sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn3.conf -datadir=/var/li
 ```
 ## Usage (Where * is the MN 1,2, or 3)
 ```
+Getinfo:
 sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn*.conf -datadir=/var/lib/masternodes/ezy_mn* getinfo
+MNsync status:
 sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn*.conf -datadir=/var/lib/masternodes/ezy_mn* mnsync status
+Masternode status:
 sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn*.conf -datadir=/var/lib/masternodes/ezy_mn* masternode status
 
 systemctl status ezy_mn* #To check the service is running.
