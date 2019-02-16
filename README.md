@@ -57,6 +57,11 @@ Where * is the MN (1, 2 or 3) and xxx.xxx.xxx.xxx is the IP address you want to 
 IP addresses to add you can find in the explorer under the tab network (http://explorer.eazynode.pro/network).
 
 ## Usage (Where * is the MN 1,2, or 3)
+
+sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn*.conf -datadir=/var/lib/masternodes/ezy_mn* getinfo
+sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn*.conf -datadir=/var/lib/masternodes/ezy_mn* mnsync status
+sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn*.conf -datadir=/var/lib/masternodes/ezy_mn* masternode status
+
 systemctl status ezy_mn* #To check the service is running.
 systemctl start ezy_mn* #To start EAZY service.
 systemctl stop ezy_mn* #To stop EAZY service.
