@@ -48,16 +48,33 @@ git clone https://github.com/EAZYCommunityNode/Eazy-install.git
 cd Eazy-install
 chmod +x install-multi.ezy
 ./install-multi.ezy
-
-In case the MN's do not sync use the follow command:
-
+```
+## In case the MN's do not sync use the follow command:
+```
 sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn*.conf -datadir=/var/lib/masternodes/ezy_mn* addnode xxx.xxx.xxx.xxx add
 
 Where * is the MN (1, 2 or 3) and xxx.xxx.xxx.xxx is the IP address you want to add.
 IP addresses to add you can find in the explorer under the tab network (http://explorer.eazynode.pro/network).
 
+OR copy and paste the following into your console:
+sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn1.conf -datadir=/var/lib/masternodes/ezy_mn1 addnode 194.99.23.28 add
+sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn1.conf -datadir=/var/lib/masternodes/ezy_mn1 addnode 23.94.189.54 add
+sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn1.conf -datadir=/var/lib/masternodes/ezy_mn1 addnode 23.94.189.53 add
+sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn1.conf -datadir=/var/lib/masternodes/ezy_mn1 addnode 37.48.67.162 add
+sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn1.conf -datadir=/var/lib/masternodes/ezy_mn1 addnode 207.148.122.124 add
+sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn2.conf -datadir=/var/lib/masternodes/ezy_mn2 addnode 194.99.23.28 add
+sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn2.conf -datadir=/var/lib/masternodes/ezy_mn2 addnode 23.94.189.54 add
+sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn2.conf -datadir=/var/lib/masternodes/ezy_mn2 addnode 23.94.189.53 add
+sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn2.conf -datadir=/var/lib/masternodes/ezy_mn2 addnode 37.48.67.162 add
+sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn2.conf -datadir=/var/lib/masternodes/ezy_mn2 addnode 207.148.122.124 add
+sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn3.conf -datadir=/var/lib/masternodes/ezy_mn3 addnode 194.99.23.28 add
+sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn3.conf -datadir=/var/lib/masternodes/ezy_mn3 addnode 23.94.189.54 add
+sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn3.conf -datadir=/var/lib/masternodes/ezy_mn3 addnode 23.94.189.53 add
+sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn3.conf -datadir=/var/lib/masternodes/ezy_mn3 addnode 37.48.67.162 add
+sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn3.conf -datadir=/var/lib/masternodes/ezy_mn3 addnode 207.148.122.124 add
+```
 ## Usage (Where * is the MN 1,2, or 3)
-
+```
 sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn*.conf -datadir=/var/lib/masternodes/ezy_mn* getinfo
 sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn*.conf -datadir=/var/lib/masternodes/ezy_mn* mnsync status
 sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn*.conf -datadir=/var/lib/masternodes/ezy_mn* masternode status
