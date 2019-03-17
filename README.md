@@ -41,7 +41,7 @@ git clone https://github.com/EAZYCommunityNode/Eazy-install.git && cd Eazy-insta
 
 ```
 ***
-## Commands to set up Multi-MN for EZY (Currently supports up to 3 MN on 1 VPS):
+## Commands to set up Multi-MN for EZY (Currently supports up to 5 MN on 1 VPS):
 ```
 chmod +x /var/
 git clone https://github.com/EAZYCommunityNode/Eazy-install.git
@@ -53,7 +53,7 @@ chmod +x install-multi.ezy
 ```
 sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn*.conf -datadir=/var/lib/masternodes/ezy_mn* addnode xxx.xxx.xxx.xxx add
 
-Where * is the MN (1, 2 or 3) and xxx.xxx.xxx.xxx is the IP address you want to add.
+Where * is the MN (1, 2, 3, 4 or 5) and xxx.xxx.xxx.xxx is the IP address you want to add.
 IP addresses to add you can find in the explorer under the tab network (http://explorer.eazynode.pro/network).
 
 OR copy and paste the following into your console:
@@ -73,7 +73,7 @@ sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn3.conf -datadir=/var/li
 sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn3.conf -datadir=/var/lib/masternodes/ezy_mn3 addnode 37.48.67.162 add
 sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn3.conf -datadir=/var/lib/masternodes/ezy_mn3 addnode 207.148.122.124 add
 ```
-## Usage (Where * is the MN 1,2, or 3)
+## Usage (Where * is the MN 1,2,3,4 or 5)
 ```
 Getinfo:
 sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn*.conf -datadir=/var/lib/masternodes/ezy_mn* getinfo
