@@ -72,6 +72,16 @@ sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn3.conf -datadir=/var/li
 sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn3.conf -datadir=/var/lib/masternodes/ezy_mn3 addnode 23.94.189.53 add
 sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn3.conf -datadir=/var/lib/masternodes/ezy_mn3 addnode 37.48.67.162 add
 sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn3.conf -datadir=/var/lib/masternodes/ezy_mn3 addnode 207.148.122.124 add
+sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn4.conf -datadir=/var/lib/masternodes/ezy_mn3 addnode 194.99.23.28 add
+sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn4.conf -datadir=/var/lib/masternodes/ezy_mn3 addnode 23.94.189.54 add
+sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn4.conf -datadir=/var/lib/masternodes/ezy_mn3 addnode 23.94.189.53 add
+sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn4.conf -datadir=/var/lib/masternodes/ezy_mn3 addnode 37.48.67.162 add
+sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn4.conf -datadir=/var/lib/masternodes/ezy_mn3 addnode 207.148.122.124 add
+sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn5.conf -datadir=/var/lib/masternodes/ezy_mn3 addnode 194.99.23.28 add
+sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn5.conf -datadir=/var/lib/masternodes/ezy_mn3 addnode 23.94.189.54 add
+sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn5.conf -datadir=/var/lib/masternodes/ezy_mn3 addnode 23.94.189.53 add
+sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn5.conf -datadir=/var/lib/masternodes/ezy_mn3 addnode 37.48.67.162 add
+sudo /usr/local/bin/ezy-cli -conf=/etc/masternodes/ezy_mn5.conf -datadir=/var/lib/masternodes/ezy_mn3 addnode 207.148.122.124 add
 ```
 ## Usage (Where * is the MN 1,2,3,4 or 5)
 ```
